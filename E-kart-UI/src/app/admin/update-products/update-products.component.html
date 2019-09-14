@@ -1,0 +1,215 @@
+<div class="main-div">
+    <mat-card>
+      <div>
+          <hr class="hr-text" data-content="UPDATE PRODUCT"><br /><br />
+      </div>
+      <mat-card-content>
+          <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+              <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+              <div fxFlex.gt-sm="80" fxFlex="100" >
+                <mat-card>
+                  <mat-card-content>
+                      <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                          <div fxFlex.gt-sm="50" fxFlex="100" >
+                              <div style="width: 100%; height: 100%;">
+                                  <mat-card >
+                                    <mat-card-content>
+                                  <ngx-gallery  [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+                                  <br/>
+                                  <br/>
+                                  <div>
+                                      <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                          <div fxFlex.gt-sm="49" fxFlex="100" >
+                                            <form [formGroup]="prodImgForm">
+                                              <input type="file" hidden  #fileInput (change)="onFileChanged($event)" formControlName="prod_img"  multiple=true />
+                                            <button type="button" (click)="fileInput.click()" mat-raised-button style="width: 100%;">Add Product Image</button>
+                                          </form>
+                                          </div>
+                                          <div fxFlex.gt-sm="2" fxFlex="100" ></div>
+                                          <div fxFlex.gt-sm="49" fxFlex="100" >
+                                            <button type="button" (click)="reset()" mat-raised-button style="width: 100%;">Reset Image</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </mat-card-content>
+                                </mat-card>
+                                </div>
+                          </div>
+                          <div fxFlex.gt-sm="50" fxFlex="100" >
+                            <mat-card>
+                              <mat-card-content>
+                            <form [formGroup]="productForm">
+                              <mat-form-field style="width:100%;">
+                                <input matInput type="text" placeholder="Product Name" formControlName="prod_name" required>
+                                <mat-error *ngIf="productForm.controls['prod_name'].hasError('required') && productForm.controls['prod_name'].touched">
+                                    Product Name is <strong>required</strong>
+                                  </mat-error>
+                              </mat-form-field>
+                              <mat-form-field style="width:100%;">
+                                  <input matInput type="text" placeholder="Product Description" required formControlName="prod_desc">
+                                  <mat-error *ngIf="productForm.controls['prod_desc'].hasError('required') && productForm.controls['prod_desc'].touched">
+                                      Product Description is <strong>required</strong>
+                                    </mat-error>
+                              </mat-form-field>
+                              <mat-form-field style="width:100%;">
+                                  <input matInput type="text" placeholder="Product Code/Article Number" required formControlName="prod_code">
+                                  <mat-error *ngIf="productForm.controls['prod_code'].hasError('required') && productForm.controls['prod_code'].touched">
+                                      Product Code/Article Number is <strong>required</strong>
+                                    </mat-error>
+                              </mat-form-field>
+                              <mat-form-field style="width:100%;">
+                                  <input matInput type="text" placeholder="Product Price" required formControlName="prod_price">
+                                  <mat-error *ngIf="productForm.controls['prod_price'].hasError('required') && productForm.controls['prod_price'].touched">
+                                      Product Price is <strong>required</strong>
+                                    </mat-error>
+                              </mat-form-field>
+                              <mat-radio-group formControlName="prod_gender">
+                                  <label class="gender">Gender * : </label><br/><br/>
+                                  <mat-radio-button [checked]="genFlag" value="Male">Male</mat-radio-button> &nbsp;&nbsp;
+                                  <mat-radio-button [checked]="! genFlag" value="Female">Female</mat-radio-button>
+                              </mat-radio-group>
+                              <small *ngIf="productForm.controls['prod_gender'].hasError('required') && productForm.controls['prod_gender'].touched">
+                                  Gender is <strong>required</strong>
+                              </small>
+                              <h4>Size Wise Quantity</h4>
+                              <div>
+                                  <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                      <div fxFlex.gt-sm="18" fxFlex="100" >
+                                        <mat-form-field style="width:100%;">
+                                          <input required matInput placeholder="Size 'S'" type="number" formControlName="prod_size_s">
+                                          <mat-error *ngIf="productForm.controls['prod_size_s'].hasError('required') && productForm.controls['prod_size_s'].touched">
+                                              Quantity is <strong>required</strong>
+                                            </mat-error>
+                                        </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>              
+                                      <div fxFlex.gt-sm="18" fxFlex="100" >
+                                          <mat-form-field style="width:100%;">
+                                              <input required matInput placeholder="Size 'M'" type="number" formControlName="prod_size_m">
+                                              <mat-error *ngIf="productForm.controls['prod_size_m'].hasError('required') && productForm.controls['prod_size_m'].touched">
+                                                  Quantity is <strong>required</strong>
+                                                </mat-error>
+                                            </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>              
+                                      <div fxFlex.gt-sm="18" fxFlex="100" >
+                                          <mat-form-field style="width:100%;">
+                                              <input required matInput placeholder="Size 'L'" type="number" formControlName="prod_size_l">
+                                              <mat-error *ngIf="productForm.controls['prod_size_l'].hasError('required') && productForm.controls['prod_size_l'].touched">
+                                                  Quantity is <strong>required</strong>
+                                                </mat-error>
+                                            </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>              
+                                      <div fxFlex.gt-sm="18" fxFlex="100" >
+                                          <mat-form-field style="width:100%;">
+                                              <input required matInput placeholder="Size 'XL'" type="number" formControlName="prod_size_xl">
+                                              <mat-error *ngIf="productForm.controls['prod_size_xl'].hasError('required') && productForm.controls['prod_size_xl'].touched">
+                                                  Quantity is <strong>required</strong>
+                                                </mat-error>
+                                            </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>              
+                                      <div fxFlex.gt-sm="18" fxFlex="100" >
+                                          <mat-form-field style="width:100%;">
+                                              <input required matInput placeholder="Size 'XXL'" type="number" formControlName="prod_size_xxl">
+                                              <mat-error *ngIf="productForm.controls['prod_size_xxl'].hasError('required') && productForm.controls['prod_size_xxl'].touched">
+                                                  Quantity is <strong>required</strong>
+                                                </mat-error>
+                                            </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                      <div fxFlex.gt-sm="49" fxFlex="100" >
+                                        <mat-form-field style="width:100%">
+                                          <input matInput required type="text" placeholder="Color Name" formControlName="prod_color">
+                                          <mat-error *ngIf="productForm.controls['prod_color'].hasError('required') && productForm.controls['prod_color'].touched">
+                                              Product Color is <strong>required</strong>
+                                            </mat-error>
+                                        </mat-form-field>
+                                      </div>
+                                      <div fxFlex.gt-sm="2" fxFlex="100" ></div>
+                                      <div fxFlex.gt-sm="49" fxFlex="100" >
+                                          <mat-form-field style="width:100%">
+                                              <input matInput type="text" autocomplete="off" [(colorPicker)]="color" [value]="color" [style.background]="color" [cpPosition]="'bottom'" placeholder="Color Code" formControlName="prod_color_code">
+                                              <mat-error *ngIf="productForm.controls['prod_color_code'].hasError('required') && productForm.controls['prod_color_code'].touched">
+                                                  Product color code is <strong>required</strong>
+                                                </mat-error>
+                                            </mat-form-field>
+                                      </div>
+                                  </div>
+                              </div>
+                              <mat-form-field style="width:100%;">
+                                  <mat-label>Neck Style</mat-label>
+                                      <mat-select formControlName="prod_neck_style" required>
+                                        <mat-option *ngFor="let neck of neckStyles" [value]="neck">
+                                          {{neck}}
+                                        </mat-option>
+                                      </mat-select>
+                                  <mat-error *ngIf="productForm.controls['prod_neck_style'].hasError('required') && productForm.controls['prod_neck_style'].touched">
+                                      Neck Style is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field style="width:100%;">
+                                    <mat-label>Sleeves Style</mat-label>
+                                        <mat-select formControlName="prod_sleeves_style" required>
+                                          <mat-option *ngFor="let sleeve of sleeves" [value]="sleeve">
+                                            {{sleeve}}
+                                          </mat-option>
+                                        </mat-select>
+                                    <mat-error *ngIf="productForm.controls['prod_sleeves_style'].hasError('required') && productForm.controls['prod_sleeves_style'].touched">
+                                        Sleeves Style is <strong>required</strong>
+                                      </mat-error>
+                                  </mat-form-field>
+                                  <mat-form-field style="width:100%;">
+                                      <mat-label>Print Style</mat-label>
+                                          <mat-select formControlName="prod_print_type" (selectionChange)="printType($event)" required>
+                                            <mat-option *ngFor="let print of printStyle" [value]="print">
+                                              {{print}}
+                                            </mat-option>
+                                          </mat-select>
+                                      <mat-error *ngIf="productForm.controls['prod_print_type'].hasError('required') && productForm.controls['prod_print_type'].touched">
+                                          Print Style is <strong>required</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field style="width:100%" *ngIf="flag">
+                                        <input matInput required type="text" placeholder="Text Printed on T-shirt" formControlName="prod_printed_text">
+                                        <mat-error *ngIf="productForm.controls['prod_printed_text'].hasError('required') && productForm.controls['prod_printed_text'].touched">
+                                            Printed Text is <strong>required</strong>
+                                          </mat-error>
+                                      </mat-form-field>
+                                      <mat-form-field style="width:100%">
+                                          <input matInput  type="text" placeholder="Other Specification" formControlName="prod_other_specification">
+                                          <mat-hint>Specification if any provide in comma(',') speperated value</mat-hint>
+                                        </mat-form-field>
+                                        
+                                        <div style="padding-top: 30px;padding-bottom: 15px;">
+                                            <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                                <div fxFlex.gt-sm="49" fxFlex="100" >
+                                                  <button type="button" (click)="addProduct()" mat-raised-button style="width: 100%;">Add Product</button>
+                                                </div>
+                                                <div fxFlex.gt-sm="2" fxFlex="100" ></div>
+                                                <div fxFlex.gt-sm="49" fxFlex="100" >
+                                                    <button type="reset" mat-raised-button style="width: 100%;">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </form>
+                          </mat-card-content>
+                          </mat-card>
+                            </div>
+                      </div>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+              <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+          </div>    
+      </mat-card-content>
+    </mat-card>
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+        <div fxFlex.gt-sm="35" fxFlex="100" ></div>
+    </div>
+    </div>

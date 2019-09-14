@@ -1,0 +1,103 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px"  class="background-b1">
+    <div fxFlex.gt-sm="30" fxFlex="100" class="top_margin"></div>
+  <div fxFlex.gt-sm="40" fxFlex="100" class="top_margin">
+    <mat-card  style="opacity: 0.9;">
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <mat-card-content fxLayout="column" fxLayoutGap="20px" class="pa-1">
+        <div>
+          <hr class="hr-text" data-content="Signup with Markhor"><br /><br />
+        </div>
+        <div class="align_center m1">
+            Signup with
+        </div>
+        <div class="align_center">
+          <div fxLayout="row wrap">
+            <div fxFlex.gt-sm="20" fxFlex="100"></div>
+            <div fxFlex.gt-sm="30" fxFlex="100">
+              <button mat-stroked-button type="button">
+                <mat-icon svgIcon="fb"></mat-icon>Facebook
+              </button>
+            </div>
+            <div fxFlex.gt-sm="30" fxFlex="100">
+              <button mat-stroked-button type="button">
+                <mat-icon svgIcon="gmail"></mat-icon>Google
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="align_center ">
+          - OR USING EMAIL -
+        </div>
+        <div class="align_center ">
+          <div fxLayout="row wrap">
+            <div fxFlex.gt-sm="20" fxFlex="100"></div>
+            <div fxFlex.gt-sm="60" fxFlex="100" class="example-container">
+                <mat-form-field >
+                    <input matInput placeholder="Name" type="text" formControlName="name">
+                    <mat-error *ngIf="registerForm.controls['name'].hasError('required') && registerForm.controls['name'].touched">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              <mat-form-field >
+                <input matInput placeholder="Email Address" type="email" formControlName="email">
+                <mat-error *ngIf="registerForm.controls['email'].hasError('email') && !registerForm.controls['email'].hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field >
+                  <input matInput placeholder="Password" formControlName="password" [type]="hide ?'text': 'password' " type="password" placeholder="Password" >
+                  <mat-icon matSuffix style=" cursor: pointer;" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="registerForm.controls['password'].hasError('pattern') && !registerForm.controls['password'].hasError('required')">
+                    Password length should be greater than or equal to 6 
+                  </mat-error>
+                  <mat-error *ngIf="registerForm.controls['password'].hasError('required') && registerForm.controls['password'].touched">
+                    Password is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field >
+                    <input matInput placeholder="Phone Number" type="number" formControlName="contact_number">
+                    <mat-error *ngIf="registerForm.controls['contact_number'].hasError('pattern') && !registerForm.controls['contact_number'].hasError('required')">
+                     Contact no. should be of 10 digit and start with 6 to 9
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.controls['contact_number'].hasError('required') && registerForm.controls['contact_number'].touched">
+                      Contact number is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <div style="text-align: left;">
+                      <mat-radio-group formControlName="gender">
+                          <mat-radio-button value="male">Male</mat-radio-button> &nbsp;
+                          <mat-radio-button value="female">Female</mat-radio-button>
+                      </mat-radio-group>
+                      <div>
+                      <small class="mat-text-warn" *ngIf="registerForm.controls['gender'].hasError('required') && flag">
+                        Contact number is <strong>required</strong>
+                      </small>
+                    </div>
+                      </div>
+                   
+            </div>
+          </div>
+
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+          <div fxLayout="row wrap">
+              <div fxFlex.gt-sm="20" fxFlex="100"></div>
+              <div fxFlex.gt-sm="60" fxFlex="100" class="example-container">
+                <button  mat-raised-button type="submit" style="background:#FDBFC2" [ngClass]="{'disable-pointer' : registerForm.invalid}" [disabled]="registerForm.invalid">Register</button>
+                <div style="font-size: 12px; padding-top: 5px;">Already have an account? <span ><a routerLink="/login" style="color:#E6AF91;text-decoration: none">Login!</a></span></div>
+                <br/>
+                </div>
+                </div>
+                
+      </mat-card-actions>
+    </form>
+    </mat-card>
+    <br/> <br/> <br/><br/> 
+  </div>
+  
+</div>

@@ -1,0 +1,73 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="90" fxFlex="100" >
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100" >
+      <div matRipple class="fab-btn" matTooltip="Close" (click)="closeDialog()"><span style="margin-top: 15000px;">X</span></div>
+    </div>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+      <div fxFlex.gt-sm="100" fxFlex="100" >
+        <div class="order-setail-head">
+            <hr class="hr-text" data-content="ORDER DETAILS">
+        </div>
+        <div class="order-details-body">
+          <div class="order-id">
+            Order ID: 23184099
+          </div><br/>
+          <div class="shipping-details">
+            <mat-card>
+              <mat-card-title>
+                  <div class="shipping-details-head">
+                      Shipping Details:
+                    </div>
+                    <div class="seperator">
+                        <mat-divider></mat-divider>
+                    </div>
+              </mat-card-title>
+              <mat-card-content>
+                  <div class="shipping-details-content">
+                      <div class="customer-name">Sahil Soni <span style="float: right;">Home</span></div><br/>
+                      <div class="customer-address"> H No.280 Ward No.15 Malviya Ganj near new gurudwara </div><br/>
+                      <div class="customer-city">Itarsi, Pincode: 461111</div><br/>
+                      <div class=" trun-color customer-contact-no">Contact Number: 8770032079</div>
+                    </div>
+              </mat-card-content>
+            </mat-card>
+        </div><br/>
+          <div class="summary">
+          <div class="summary-head">
+            Summary
+          </div><br/>
+          <div class="summary-content">
+            <div class="original-price">
+              Cart Total <span class="align-right"> ₹299 </span>
+            </div><br/>
+            <div class="shipping-cost">
+              Shipping Cost <span class="align-right turn-green">FREE </span>
+            </div><br/>
+            <div class="cod">
+                COD <span class="align-right turn-green"> FREE </span>
+            </div><br/>
+            <div class="total-price">
+              Order Total <span class="align-right"> ₹299 </span>
+            </div><br/>
+          </div>
+        </div><br/>
+        <div class="amount-paid">
+          <div class="seperator">
+            <mat-divider></mat-divider>
+          </div><br/>
+          <div class="amount-paid-content">
+            Amount Paid <span class="align-right"> ₹299 </span>
+          </div><br/>
+          <div class="seperator">
+              <mat-divider></mat-divider>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>  
+  </mat-card-content>
+</mat-card>

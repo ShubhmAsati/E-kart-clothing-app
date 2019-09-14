@@ -1,0 +1,105 @@
+<mat-toolbar color="transparent">
+  <mat-toolbar-row>
+    <h2 class="heading-top">Add New Products</h2>
+  </mat-toolbar-row>
+  <mat-toolbar-row></mat-toolbar-row>
+</mat-toolbar>
+
+<div fxLayout="row wrap" fxLayoutAlign="center start">
+  <div fxFlex.gt-sm="55" fxFlex="100">
+    <form fxLayout="column" [formGroup]="productForm" (ngSubmit)="addProduct()">
+      <mat-card class="mat-card-top pa-0">
+        <mat-card-content class="pa-1">
+
+
+          <div class="mb-1">
+            <mat-label style="font-weight: bold">Add Product Images</mat-label>
+            </div>
+          <div>
+            <input type="file" hidden formControlName="product_pics" #fileInput (change)="onFileChanged($event)">
+            <i class="material-icons upload_icon" (click)="fileInput.click()">cloud_upload</i>
+            <img class="uploadimage-bottom" [src]="url" />
+          </div>
+
+
+
+          <div class="mb-1">
+            <mat-form-field style="width: 100%">
+              <input matInput placeholder="Name" formControlName = "name">
+            </mat-form-field>
+            <small *ngIf="productForm.controls['name'].hasError('required') && productForm.controls['name'].touched" class="mat-text-warn">You
+              must include a  name.</small>
+            <small *ngIf="productForm.controls['name'].hasError('minlength') && productForm.controls['name'].touched" class="mat-text-warn">Your
+              name  must be at least 2 characters long.</small>
+            <small *ngIf="productForm.controls['name'].hasError('maxlength') && productForm.controls['name'].touched" class="mat-text-warn">Your
+              name  cannot exceed 30 characters.</small>
+          </div>
+
+
+          <div class="mb-1">
+            <mat-form-field style="width: 100%">
+              <input matInput placeholder="Email" [formControl]="productForm.controls['email']" type="email">
+            </mat-form-field>
+            <small *ngIf="productForm.controls['email'].hasError('required') && productForm.controls['email'].touched" class="mat-text-warn">You
+              must include an email address.</small>
+            <small *ngIf="productForm.controls['email'].errors?.email && productForm.controls['email'].touched" class="mat-text-warn">You
+              must include a valid email address.</small>
+          </div>
+
+
+          <div class="mb-1">
+            <mat-form-field style="width: 100%">
+              <input matInput placeholder="Contact Number" [formControl]="productForm.controls['contact_number']">
+            </mat-form-field>
+            <small *ngIf="productForm.controls['contact_number'].hasError('required') && productForm.controls['contact_number'].touched" class="mat-text-warn">You
+              must include a contact number.</small>
+            <small *ngIf="productForm.controls['contact_number'].hasError('minlength') && productForm.controls['contact_number'].touched" class="mat-text-warn">Your
+              contact number  must be at least 10 characters long.</small>
+            <small *ngIf="productForm.controls['contact_number'].hasError('maxlength') && productForm.controls['contact_number'].touched" class="mat-text-warn">Your
+              contact number  cannot exceed 10 characters.</small>
+          </div>
+
+
+
+
+          <div class="mb-1">
+            <mat-form-field style="width: 100%">
+              <input matInput placeholder="Password" [formControl]="productForm.controls['password']" type="password">
+            </mat-form-field>
+            <small *ngIf="productForm.controls['password'].hasError('required') && productForm.controls['password'].touched" class="mat-text-warn">You
+              must include password.</small>
+          </div>
+
+          <div class="mb-1">
+            <mat-form-field style="width: 100%">
+              <input matInput placeholder="Address" [formControl]="productForm.controls['address']">
+            </mat-form-field>
+            <small *ngIf="productForm.controls['address'].hasError('required') && productForm.controls['address'].touched" class="mat-text-warn">You
+              must include address.</small>
+            <small *ngIf="productForm.controls['address'].hasError('minlength') && productForm.controls['address'].touched" class="mat-text-warn">Your
+              address  must be at least 2 characters long.</small>
+            <small *ngIf="productForm.controls['address'].hasError('maxlength') && productForm.controls['address'].touched" class="mat-text-warn">Your
+              address  cannot exceed 50 characters.</small>
+          </div>
+
+
+          <!-- <div class="pb-1">
+            <mat-radio-group style="width: 100%" [formControl]="productForm.controls['user_type']">
+              <mat-radio-button value="2" >Driver</mat-radio-button>
+              <mat-radio-button value="1" [checked]="true">Manager</mat-radio-button>
+            </mat-radio-group>
+            <small *ngIf="!productForm.controls['user_type'].valid && productForm.controls['user_type'].touched" class="mat-text-warn">You must select a emp_type.</small>
+          </div> -->
+
+
+        </mat-card-content>
+
+        <mat-card-actions class="pa-1">
+          <button mat-raised-button  class="footer_btn"  type="submit">Add Manager</button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+</div>
+
+

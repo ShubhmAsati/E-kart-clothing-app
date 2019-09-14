@@ -1,0 +1,116 @@
+<!-- <mat-card>
+  <mat-card-content> -->
+    <marquee>{{display_text}}</marquee>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" >
+    <div fxFlex.gt-sm="10" fxFlex="100"></div>
+    <div fxFlex.gt-sm="80" fxFlex="100" style="padding: 10px;">
+      <mat-card>
+        <mat-card-content>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+            <div fxFlex.gt-sm="50" fxFlex="100" >
+              <div style="width: 100%; height: 100%;">
+                <mat-card   style="z-index:0 ;">
+                  <mat-card-content>
+                <ngx-gallery   [options]="galleryOptions" (previewOpen)="toggle()" (previewClose)="toggle()"  [images]="galleryImages"></ngx-gallery>
+              </mat-card-content>
+              </mat-card>
+              </div>
+            </div>
+            <div fxFlex.gt-sm="50" fxFlex="100" >
+                <mat-card [ngClass]="{'z-index-change':zIndexFlag}">
+                    <mat-card-content>
+                        <div fxLayout="row">
+                            <div fxFlex.gt-sm="100" fxFlex="100" >
+                                <div fxLayout="row">
+                                    <div fxFlex.gt-sm="80" fxFlex="100" >
+                                        <div class="product-name">
+                                            {{product_detail.name}}
+                                        </div>
+                                        <div class="product-price">
+                                            ₹{{product_detail.price}}
+                                        </div>
+                                        <!-- <div class="product-discount">
+                                            <span class="product-original-price">₹{{product_detail.price}}</span><span class="product-discount-percentage"> 40% OFF</span>
+                                        </div> -->
+                                        <div class="tax-text">
+                                            Inclusive of all taxes
+                                        </div >
+                                        <div class="product-size-head">
+                                          <span style="float:left">Select Size</span><span style="float:right; text-decoration: underline">Size Guide</span>
+                                        </div>
+                                        <div class="product-size-list">
+                                            <mat-grid-list cols="5" rowHeight="35px">
+                                                <mat-grid-tile *ngFor=" let tshirt of t_shirt_sizes; let i=index;" (click)="selectedSize(i)">
+                                                  <div class="product-size-box cusor-type">
+                                                    <div class="product-size-box-content" [ngClass]="{'change-background-color':tshirt.isSelected}">
+                                                      <span style="margin-top: 100px;" class="product-size-box-content-element">
+                                                          {{tshirt.size}}
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                </mat-grid-tile>
+                                            </mat-grid-list>
+                                        </div><br/>
+                                        <div class="product-colors">
+                                          <mat-grid-list cols="4" rowHeight="25px">
+                                            <!-- [style.border-color]="tshirt.isSelected?tshirt.t_shirt_color:'transparent'"><mat-icon class="color-tile-icon" [svgIcon]="tshirt.t_shirt_name"></mat-icon></span> -->
+                                            <mat-grid-tile *ngFor=" let color of colors; let i=index;" (click)="filterByColor(i)"><span class="color-tile cusor-type" [style.background-color]="color.color_code" [style.border-color]="color.isSelected?'#FDBFC2':'transparent'"></span> </mat-grid-tile>
+                                            
+                                        </mat-grid-list>
+                                        </div>
+                                        <div class="product-to-bag">
+                                            <div fxLayout="row">
+                                                <div fxFlex.gt-sm="20" fxFlex="100" >
+                                                  <button class="product-to-wishlist" mat-stroked-button type="button"> <mat-icon *ngIf="addFlag" (click)="removeToWishList()">bookmark</mat-icon><mat-icon *ngIf="!addFlag" (click)="addToWishList()">bookmark_border</mat-icon></button>
+                                                </div>
+                                                <div fxFlex.gt-sm="5" fxFlex="100" >
+
+                                                </div>
+                                                <div fxFlex.gt-sm="60" fxFlex="100" >
+                                                  <div >
+                                                    <button class="product-to-bag-btn" mat-stroked-button type="button"> ADD TO BAG </button>
+                                                  </div>
+                                                  </div>
+                                                  <div fxFlex.gt-sm="10" fxFlex="100" >
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="check-delivery">
+                                          Check delivery date / COD availability
+                                        </div>
+                                        <div>
+                                            <div fxLayout="row">
+                                                <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                    <mat-form-field >
+                                                        <input matInput placeholder="Enter Pincode">
+                                                      </mat-form-field>
+                                                  </div>
+                                                  <div fxFlex.gt-sm="20" fxFlex="100" style="padding-top:12px; ">
+                                                      <button mat-button>Check</button>
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div fxFlex.gt-sm="20" fxFlex="100">
+
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+      </mat-card-content>
+      </mat-card>
+
+      
+
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100"></div>
+    </div>
+  <!-- </mat-card-content>
+</mat-card> -->
+

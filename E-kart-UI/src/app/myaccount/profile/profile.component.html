@@ -1,0 +1,211 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+  <div fxFlex.gt-sm="80" fxFlex="100" >
+  <mat-toolbar>
+    <mat-toolbar-row class="myaccount-heading">
+      My Account
+    </mat-toolbar-row>
+  </mat-toolbar>  
+  </div>
+  <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+</div>
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+    <div fxFlex.gt-sm="80" fxFlex="100" >
+      <div class="main-div">
+        <mat-card>
+          <mat-card-content>
+              <div fxLayout="row wrap" >
+                  <div fxFlex.gt-sm="100" fxFlex="100" >
+                    <div>
+                        <span>shashankcafe@gmail.com</span>
+                    </div>
+                    <div class="divider-horizontal"> <mat-divider [inset]="true"></mat-divider></div>
+                  </div>
+              </div>
+              <div fxLayout="row" >
+                  <div fxFlex.gt-sm="20" fxFlex="100" class="removeExtraSpace">
+                      <app-side-nav [data]="3"></app-side-nav>
+                  </div>
+                  <div fxFlex.gt-sm="80" fxFlex="100" >
+                      <div>
+                        <mat-card>
+                          <mat-card-content>
+                              <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                  <div fxFlex.gt-sm="100" fxFlex="100" >
+                                      <div class="profile-head">
+                                          PERSONAL INFO <span style="float: right;"><button type="button" mat-stroked-button (click)="editProfile()">Edit Profile</button></span>
+                                        </div><br/>
+                                  </div>
+                              </div>
+                              <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                  <div fxFlex.gt-sm="40" fxFlex="100" >
+                                      <!-- <div >
+                                        <img [class.mat-elevation-z2]="true"  src="data:image/png;base64,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">
+                                      </div> -->
+                                      <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                          <div fxFlex.gt-sm="10" fxFlex="100" ></div>  
+                                        <div fxFlex.gt-sm="80" fxFlex="100" >
+                                      <div class="profile-pic">
+                                        <div class="profile-pic-dimension">
+                                          <mat-card >
+                                            <mat-card-content>
+                                               <img mat-card-image src="data:image/png;base64,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">
+                                            </mat-card-content>
+                                          </mat-card>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div fxFlex.gt-sm="10" fxFlex="100" ></div>  
+                                        </div>
+                                  </div>
+                                  <div fxFlex.gt-sm="60" fxFlex="100" >
+                                      <div class="personal-info">
+                                          <div fxLayout="row" fxLayout.xs="column" >
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">First Name</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                <div class="info">Shashank</div>
+                                              </div>
+                                          </div><br/>
+                                          <div fxLayout="row" fxLayout.xs="column">
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">Last Name</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info">Soni</div>
+                                              </div>
+                                          </div><br/>
+                                          <div fxLayout="row" fxLayout.xs="column">
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">Gender</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info">Male</div>
+                                              </div>
+                                          </div><br/>
+                                          <div fxLayout="row" fxLayout.xs="column">
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">Date of Birth</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info">27-12-1996</div>
+                                              </div>
+                                          </div><br/>
+                                          <div fxLayout="row" fxLayout.xs="column">
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">Mobile Number</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info">877019623</div>
+                                              </div>
+                                          </div><br/>
+                                          <div fxLayout="row" fxLayout.xs="column">
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info-title">E-mail</div>        
+                                              </div>
+                                              <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                  <div class="info">shashankcafe@gmail.com</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            <!-- <div class="acc-profile">
+                                <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                    <div fxFlex.gt-sm="10" fxFlex="100" >
+                                    </div>
+                                    <div fxFlex.gt-sm="80" fxFlex="100" >
+                                        <div fxLayout="row">
+                                            <div fxFlex.gt-sm="25" fxFlex="100" >
+                                            </div>
+                                          <div fxFlex.gt-sm="30" fxFlex="100" >
+                                              <div class="profile-head">
+                                                  PERSONAL INFO
+                                                </div><br/>
+                                                <div  class="profile-pic">
+                                                  <img [class.mat-elevation-z2]="true" class="profile-pic-container" src="data:image/png;base64,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">
+                                                </div>
+                                                </div><br/><br/>
+                                          
+                                          <div fxFlex.gt-sm="30" fxFlex="100" >
+                                          </div>
+                                        </div>
+                                      <div class="personal-info">
+                                        <div fxLayout="row" style="padding-top: 10px">
+                                            <div fxFlex.gt-sm="25" fxFlex="100" >
+                                            </div>
+                                          <div fxFlex.gt-sm="80" fxFlex="100" >
+                                              <div fxLayout="row" fxLayout.xs="column" >
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">First Name</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                    <div class="info">Shashank</div>
+                                                  </div>
+                                              </div><br/>
+                                              <div fxLayout="row" fxLayout.xs="column">
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">Last Name</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info">Soni</div>
+                                                  </div>
+                                              </div><br/>
+                                              <div fxLayout="row" fxLayout.xs="column">
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">Gender</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info">Male</div>
+                                                  </div>
+                                              </div><br/>
+                                              <div fxLayout="row" fxLayout.xs="column">
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">Date of Birth</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info">27-12-1996</div>
+                                                  </div>
+                                              </div><br/>
+                                              <div fxLayout="row" fxLayout.xs="column">
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">Mobile Number</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info">877019623</div>
+                                                  </div>
+                                              </div><br/>
+                                              <div fxLayout="row" fxLayout.xs="column">
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info-title">E-mail</div>        
+                                                  </div>
+                                                  <div fxFlex.gt-sm="50" fxFlex="100" >
+                                                      <div class="info">shashankcafe@gmail.com</div>
+                                                  </div>
+                                              </div><br/>
+                                          </div>
+                                          <div fxFlex.gt-sm="30" fxFlex="100" >
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div fxFlex.gt-sm="10" fxFlex="100" >
+                                      <div>
+                                        <span><button type="button" mat-stroked-button >Edit Profile</button></span>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                          </mat-card-content>
+                        </mat-card>
+                      </div>
+                  </div>
+              </div>
+          </mat-card-content>
+        </mat-card>
+    </div>
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+  </div>

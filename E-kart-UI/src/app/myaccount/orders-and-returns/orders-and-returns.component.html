@@ -1,0 +1,113 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+  <div fxFlex.gt-sm="80" fxFlex="100" >
+  <mat-toolbar>
+    <mat-toolbar-row class="myaccount-heading">
+      My Account
+    </mat-toolbar-row>
+  </mat-toolbar>  
+  </div>
+  <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+</div>
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+    <div fxFlex.gt-sm="80" fxFlex="100" >
+      <div class="main-div">
+        <mat-card>
+          <mat-card-content>
+              <div fxLayout="row wrap" >
+                  <div fxFlex.gt-sm="100" fxFlex="100" >
+                    <div>
+                        <span>shashankcafe@gmail.com</span>
+                    </div>
+                    <div class="divider-horizontal"> <mat-divider [inset]="true"></mat-divider></div>
+                  </div>
+              </div>
+              <div fxLayout="row" >
+                  <div fxFlex.gt-sm="20" fxFlex="100" class="removeExtraSpace">
+                      <app-side-nav [data]="1"></app-side-nav>
+                  </div>
+                  <div fxFlex.gt-sm="80" fxFlex="100" >
+                      <div>
+                        <mat-card>
+                          <mat-card-content>
+                            <div class="acc-order">
+                                <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                    <div fxFlex.gt-sm="25" fxFlex="100" >
+                                        <div class="acc-order-pic">
+                                            <mat-card>
+                                               <mat-card-content>
+                                                  <img mat-card-image height="260px" width="150px;" src="https://i.kinja-img.com/gawker-media/image/upload/s--8l1CI_WC--/c_scale,f_auto,fl_progressive,q_80,w_800/joumqxi8np0phogpo62y.png">
+                                               </mat-card-content>  
+                                            </mat-card>
+                                        </div>
+                                    </div>
+                                    <div fxFlex.gt-sm="75" fxFlex="100" >
+                                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                            <div fxFlex.gt-sm="70" fxFlex="100">
+                                              <div class="acc-order-data">
+                                              <div class="acc-order-head">
+                                                  Time Aayega Full Sleeve T-Shirt
+                                              </div>
+                                              <div class="acc-order-price">
+                                                  ₹299 | <span style="color: rgba(161, 161, 161, 0.877);">Size:</span>2XL
+                                              </div>
+                                              <div class="status-head">
+                                                  Order Status:
+                                              </div>
+                                              <div class="status-val">
+                                                <span class="dot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Returned
+                                              </div>
+                                              </div>
+                                            </div>
+                                            <div fxFlex.gt-sm="15" fxFlex="100">
+                                                <div class="order-details-head">ORDER DATE</div>
+                                                <div class="order-details">
+                                                    4 Mar, 2019
+                                                  </div>
+                                            </div>
+                                            <div fxFlex.gt-sm="15" fxFlex="100">
+                                                <div class="order-details-head">ORDER ID</div>
+                                                <div class="order-details">
+                                                    23184099
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                                            <div fxFlex.gt-sm="100" fxFlex="100">
+                                              <div class="step-bar">
+                                                <mat-horizontal-stepper #stepper linear>
+                                                    <mat-step  [editable]="false" >
+                                                        <ng-template matStepLabel state="done2">Confirmed</ng-template>
+                                                    </mat-step>
+                                                    <mat-step [editable]="false" >
+                                                        <ng-template matStepLabel>Dispatched</ng-template>
+                                                    </mat-step>
+                                                    <mat-step [editable]="false">
+                                                        <ng-template matStepLabel>Delivered</ng-template>
+                                                    </mat-step>
+                                                  </mat-horizontal-stepper>
+                                                  <ng-template matStepperIcon="done2">
+                                                    <mat-icon>done</mat-icon>
+                                                  </ng-template>
+                                                  </div>
+                                                  <div class="action-btn">
+                                                      <button type="button" (click)="getOrderDetails()" mat-stroked-button >Track</button>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                          </mat-card-content>
+                        </mat-card>
+                      </div>
+                  </div>
+              </div>
+          </mat-card-content>
+        </mat-card>
+    </div>
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+  </div>

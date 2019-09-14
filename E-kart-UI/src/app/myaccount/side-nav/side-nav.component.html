@@ -1,0 +1,39 @@
+<div>
+  <mat-card>
+    <mat-card-content>
+        <div matRipple class="side-nav-content" [ngClass]="{'change-color':flag[0]}" (click)="navigate(0)">
+            Overview
+        </div>
+        <div class="divider-horizontal"> <mat-divider [inset]="true"></mat-divider></div>
+        <div>
+          <div class="side-nav-head">
+              ORDERS
+          </div>
+          <div matRipple class="side-nav-content" [ngClass]="{'change-color':flag[1]}" (click)="navigate(1)">
+            Orders & Returns
+          </div>
+        </div>
+        <!-- <div class="divider-horizontal"> <mat-divider [inset]="true"></mat-divider></div>
+        <div>
+          <div class="side-nav-head">
+              CREDITS
+          </div>
+          <div matRipple class="side-nav-content" (click)="navigate(2)" [ngClass]="{'change-color':flag[2]}">
+            Coupons
+          </div>
+        </div> -->
+        <div class="divider-horizontal"> <mat-divider [inset]="true"></mat-divider></div>
+        <div>
+            <div class="side-nav-head">
+               ACCOUNT
+            </div>
+            <div matRipple class="side-nav-content" (click)="navigate(3)" [ngClass]="{'change-color':flag[3]}">
+              Profile
+            </div>
+            <div matRipple class="side-nav-content" (click)="navigate(4)" [ngClass]="{'change-color':flag[4]}">
+                Saved Addresses
+              </div>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</div>

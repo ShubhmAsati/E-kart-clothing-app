@@ -1,0 +1,95 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="90" fxFlex="100" >
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100" >
+      <div matRipple class="fab-btn" matTooltip="Close" (click)="closeDialog()"><span style="margin-top: 15000px;">X</span></div>
+    </div>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+      <div fxFlex.gt-sm="100" fxFlex="100" >
+        <form [formGroup]="addressForm" (ngSubmit)="addAddress()">
+        <div class="order-setail-head">
+            <hr class="hr-text" data-content="Add New Address">
+        </div>
+        <div class="address-body">
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="Name" formControlName="name" required>
+              <mat-error *ngIf="addressForm.controls['name'].hasError('required') && addressForm.controls['name'].touched">
+                  Name is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="Mobile" formControlName="mobile" required>
+              <mat-error *ngIf="addressForm.controls['mobile'].hasError('required') && addressForm.controls['mobile'].touched">
+                  Contact number is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+            <div fxFlex.gt-sm="48" fxFlex="100" >
+                <mat-form-field style="width: 100%;">
+                    <input matInput placeholder="Pincode" formControlName="pincode" required>
+                    <mat-error *ngIf="addressForm.controls['pincode'].hasError('required') && addressForm.controls['pincode'].touched">
+                        Pincode is <strong>required</strong>
+                      </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxFlex.gt-sm="4" fxFlex="100" ></div>
+            <div fxFlex.gt-sm="48" fxFlex="100" >
+                <mat-form-field style="width: 100%;">
+                    <input matInput placeholder="State" formControlName="state" value="Madhya Pradesh" required>
+                    <mat-error *ngIf="addressForm.controls['state'].hasError('required') && addressForm.controls['state'].touched">
+                        State is <strong>required</strong>
+                      </mat-error>
+                </mat-form-field>
+            </div>
+          </div>
+          <mat-form-field style="width: 100%;">
+              <input matInput formControlName="addressLine1" placeholder="Address Line 1 (House No,Building)" required>
+              <mat-error *ngIf="addressForm.controls['addressLine1'].hasError('required') && addressForm.controls['addressLine1'].touched">
+                  Address is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput formControlName="addressLine2" placeholder="Address Line 2 (Street,Area)" required>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="City" formControlName="city" required value="Indore" >
+              <mat-error *ngIf="addressForm.controls['city'].hasError('required') && addressForm.controls['city'].touched">
+                  City is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <div>
+              <label class="address-type">Type of Address * : </label><br/>
+              <mat-radio-group  formControlName="addressType">
+                <mat-radio-button class="radio-btn" value="home">Home</mat-radio-button><br/>
+                <mat-radio-button class="radio-btn" value="office">Office</mat-radio-button>
+              </mat-radio-group>
+              <small *ngIf="addressForm.controls['addressType'].hasError('required') && addressForm.controls['addressType'].touched">
+                  Address Type is <strong>required</strong>
+              </small>
+            </div><br/>
+            <div class="separator">
+              <mat-divider></mat-divider>
+            </div><br/>
+            <mat-checkbox formControlName="makeDefault"> Make this as my default address</mat-checkbox><br/><br/>
+            <div class="separator">
+                <mat-divider></mat-divider>
+              </div><br/>
+              <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                  <div fxFlex.gt-sm="48" fxFlex="100" >
+                      <button type="button" mat-raised-button (click)="cancel()" style="width: 100%;color: white;background-color:rgb(240, 22, 22);">CANCEL</button>
+                  </div>
+                  <div fxFlex.gt-sm="4" fxFlex="100" ></div>
+                  <div fxFlex.gt-sm="48" fxFlex="100" >
+                      <button type="button" mat-raised-button style="width: 100%;color: white;background-color:rgb(68, 196, 255);">SAVE</button>
+                  </div>
+                </div>
+              
+        </div>
+      </form>
+      </div>
+    </div>  
+  </mat-card-content>
+</mat-card>

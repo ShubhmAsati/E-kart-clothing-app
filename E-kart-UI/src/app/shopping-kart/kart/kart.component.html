@@ -1,0 +1,170 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+  <div fxFlex.gt-sm="10" fxFlex="100"></div>
+  <div fxFlex.gt-sm="80" fxFlex="100" style="padding: 10px;">
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+          <div fxFlex.gt-sm="60" fxFlex="100">
+            <!-- <mat-card>
+              <mat-card-content> -->
+                <div  fxLayout="column" fxLayoutGap="10px">
+                    <div fxFlex.gt-sm="100" fxFlex="100">
+                        <mat-toolbar><span style="margin-left:38%;">My Bag</span></mat-toolbar>
+                    </div>
+                  <div *ngFor="let prod of product;" fxFlex.gt-sm="100" fxFlex="100">
+                      <mat-card>
+                        <mat-card-content>
+                            <div  fxLayout="row">
+                                <div fxFlex.gt-sm="30" fxFlex="100">
+                                  <img width="160px" height="200px" src="https://images.bewakoof.com/t320/boring-normal-half-sleeve-t-shirt-men-s-printed-t-shirts-207346-1547185842.jpg">
+                                </div>
+                                <div fxFlex.gt-sm="70" fxFlex="100">
+                                  <div class="product-name">
+                                      Boring Normal Half Sleeve T-Shirt
+                                  </div>
+                                  <div class="product-price">
+                                      ₹299
+                                  </div>
+                                  <div class="product-discount">
+                                      <span class="product-original-price">₹499</span><span class="product-discount-percentage"> 40% OFF</span>
+                                  </div>
+                                  <div class="tax-text">
+                                      Inclusive of all taxes
+                                  </div >
+                                  <div class="product-size">
+                                    <span >
+                                        <mat-form-field style="width:50px;">
+                                            <mat-select placeholder="Size:">
+                                              <mat-option value="option">S</mat-option>
+                                              <mat-option value="option">M</mat-option>
+                                              <mat-option value="option">L</mat-option>
+                                              <mat-option value="option">XL</mat-option>
+                                              <mat-option value="option">XXL</mat-option>
+                                              <mat-option value="option">XXXL</mat-option>
+                                              
+                                            </mat-select>
+                                          </mat-form-field>
+                                        </span>
+                                        <span style="padding-left:12px;">
+                                            <mat-form-field style="width:50px;">
+                                                <mat-select placeholder="Qty:">
+                                                  <mat-option value="option">S</mat-option>
+                                                  <mat-option value="option">M</mat-option>
+                                                  <mat-option value="option">L</mat-option>
+                                                  <mat-option value="option">XL</mat-option>
+                                                  <mat-option value="option">XXL</mat-option>
+                                                  <mat-option value="option">XXXL</mat-option>
+                                                  
+                                                </mat-select>
+                                              </mat-form-field>
+                                        </span>
+                                  </div>
+                                  <div class="remove-btn-div">
+                                      <button class="remove-btn" mat-stroked-button type="button"> Remove </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                      </mat-card>
+                  </div>
+                </div>
+              <!-- </mat-card-content>
+            </mat-card> -->
+          </div>
+          <div fxFlex.gt-sm="40" fxFlex="100">
+              <div class="order-summary">
+                  <mat-toolbar>
+                      <mat-toolbar-row>
+                          <span style="margin-left:33%;">Order Summary</span>
+                      </mat-toolbar-row>
+                  </mat-toolbar>  
+                </div>
+            <mat-card>
+              <mat-card-content>
+                  <div style="padding: 5px;">
+                      <!-- <mat?-divider></mat-divider> -->
+                    </div>
+                <div  fxLayout="row">
+                  <div fxFlex.gt-sm="100" fxFlex="100">
+                    <div style="text-align: center;font-size: 25px;" class="price-detail-head">
+                      <strong>Total</strong> 
+                    </div>
+                    
+                  </div>
+                  <!-- <div fxFlex.gt-sm="30" fxFlex="100">
+                    <div class="price-detail-body">
+                        ₹499
+                    </div>
+                      
+                    </div> -->
+                </div>
+                <div style="padding: 8px;">
+                  <!-- <mat?-divider></mat-divider> -->
+                </div>
+                <div  fxLayout="row">
+                    <div fxFlex.gt-sm="100" fxFlex="100">
+                        <div class="price-detail-head" style="text-align: center;font-size: 18px;">
+                            ₹499
+                      </div>
+                      <div class="discount-info"><strong>Congratulation</strong> you saved ₹200 on this order.</div>
+                    </div>
+                    <!-- <div fxFlex.gt-sm="30" fxFlex="100">
+                        <div class="price-detail-body">
+                            -₹200
+                        </div>
+                      </div> -->
+                  </div>
+                  <div>
+                      <hr class="hr-text" data-content="">
+                    </div>
+                  <div  fxLayout="row">
+                      <div fxFlex.gt-sm="100" fxFlex="100">
+                          <div class="price-detail-head" style="text-align: right;">
+                              Delivery Charges :&nbsp;<span class="change-text-color"><strong>FREE</strong></span>
+                           </div>   
+                      </div>
+                      <!-- <div fxFlex.gt-sm="30" fxFlex="100">
+                          <div class="price-detail-body">
+                              FREE
+                          </div>
+                        </div> -->
+                    </div>
+                    <div  fxLayout="row">
+                        <div fxFlex.gt-sm="100" fxFlex="100">
+                          <div style="text-align: right;">
+                          Bag Discount :&nbsp;<span class="change-text-color"><strong>₹200</strong></span>
+                        </div>
+                        </div>
+                        <!-- <div fxFlex.gt-sm="30" fxFlex="100">
+                          
+                          </div> -->
+                      </div>
+                      <div>
+                          <hr class="hr-text" data-content="">
+                        </div>
+                      <div  fxLayout="row">
+                          <div fxFlex.gt-sm="100" fxFlex="100">
+                            <div>
+                              
+                            </div>
+                          </div>
+                          <!-- <div fxFlex.gt-sm="30" fxFlex="100">
+                            
+                            </div> -->
+                        </div>
+                        <div  fxLayout="row">
+                            <div fxFlex.gt-sm="100" fxFlex="100">
+                              <div style="text-align:center;">
+                                <button type="button" mat-raised-button class="checkout-btn" >CHECKOUT</button>
+                              </div>
+                            </div>
+                        </div>    
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex.gt-sm="10" fxFlex="100"></div>
+  </div>

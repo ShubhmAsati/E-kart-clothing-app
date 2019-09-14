@@ -1,0 +1,77 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="90" fxFlex="100" >
+    </div>
+    <div fxFlex.gt-sm="10" fxFlex="100" >
+      <div matRipple class="fab-btn" matTooltip="Close" (click)="closeDialog()"><span style="margin-top: 15000px;">X</span></div>
+    </div>
+</div>
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+      <div fxFlex.gt-sm="100" fxFlex="100" >
+        <form [formGroup]="profileForm" (ngSubmit)="save()">
+        <div class="order-setail-head">
+            <hr class="hr-text" data-content="Account Details">
+        </div>
+        <div class="address-body">
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="First Name" formControlName="firstName" required>
+              <mat-error *ngIf="profileForm.controls['firstName'].hasError('required') && profileForm.controls['firstName'].touched">
+                  First Name is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="Last Name" formControlName="lastName" required>
+              <mat-error *ngIf="profileForm.controls['lastName'].hasError('required') && profileForm.controls['lastName'].touched">
+                  Last Name is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput formControlName="dob" [matDatepicker]="picker" placeholder="Date of Birth" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="profileForm.controls['dob'].hasError('required') && profileForm.controls['dob'].touched">
+                  Date of Birth is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="Mobile" formControlName="mobile" required >
+              <mat-error *ngIf="profileForm.controls['mobile'].hasError('required') && profileForm.controls['mobile'].touched">
+                  Mobile Number is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;">
+              <input matInput placeholder="E-mail" formControlName="email" required >
+              <mat-error *ngIf="profileForm.controls['email'].hasError('required') && profileForm.controls['email'].touched">
+                  Mobile Number is <strong>required</strong>
+                </mat-error>
+          </mat-form-field>
+          <div>
+              <label class="address-type">Gender * : </label><br/>
+              <mat-radio-group  formControlName="gender">
+                <mat-radio-button class="radio-btn" value="home">Male</mat-radio-button><br/>
+                <mat-radio-button class="radio-btn" value="office">Female</mat-radio-button>
+              </mat-radio-group>
+              <small *ngIf="profileForm.controls['gender'].hasError('required') && profileForm.controls['gender'].touched">
+                  Gender is <strong>required</strong>
+              </small>
+            </div><br/>
+            <div class="separator">
+              <mat-divider></mat-divider>
+            </div><br/>
+              <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+                  <div fxFlex.gt-sm="48" fxFlex="100" >
+                      <button type="button" mat-raised-button (click)="closeDialog()" style="width: 100%;color: white;background-color:rgb(240, 22, 22);">CANCEL</button>
+                  </div>
+                  <div fxFlex.gt-sm="4" fxFlex="100" ></div>
+                  <div fxFlex.gt-sm="48" fxFlex="100" >
+                      <button type="button" mat-raised-button style="width: 100%;color: white;background-color:rgb(68, 196, 255);">SAVE</button>
+                  </div>
+                </div>
+              
+        </div>
+      </form>
+      </div>
+    </div>  
+  </mat-card-content>
+</mat-card>

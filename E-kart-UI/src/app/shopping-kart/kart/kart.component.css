@@ -1,0 +1,88 @@
+.product-name{
+    font-size: 15px;
+    padding-bottom:8px;
+}
+
+.product-price{
+    padding-bottom: 4px;
+}
+
+.product-discount{
+    padding-bottom: 4px;
+}
+.product-discount-percentage{
+    color:rgb(233, 24, 24);
+}
+
+.tax-text{
+    font-size: 12px;
+    color: rgb(156, 153, 153);
+    padding-bottom: 1px;
+}
+
+.product-original-price{
+    text-decoration: line-through;
+}
+.cusor-type{
+    cursor: pointer;
+}
+
+.product-size{
+    font-size: 12px;
+    padding-bottom: 7%;
+}
+
+.order-summary{
+    padding-bottom: 10px;
+}
+.price-detail-body{
+    text-align: right;
+}
+
+.hr-text {
+    font-size: 25px;
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    height: 1.5em;
+    opacity: 0.7;
+}
+.hr-text:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #c0c0c0, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    background-color: #fcfcfa;
+}
+.checkout-btn{
+    background-color:#FDBFC2;
+    border-radius: 0px;
+    color:white;
+     width:100%;
+     height: 50px;
+    font-size: 20px;
+}
+
+.change-text-color{
+    color: rgb(103, 207, 255);
+}
+
+.discount-info{
+    text-align: center;
+    color: rgb(103, 207, 255);
+    padding-top: 16px;
+    margin-bottom:-10px;
+    font-size: 14px;
+}

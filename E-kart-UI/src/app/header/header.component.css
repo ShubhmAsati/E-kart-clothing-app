@@ -1,0 +1,140 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+/* .sidenav .mat-toolbar {
+  background: inherit;
+} */
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.hidden{
+  display: none;
+}
+
+mat-toolbar a {
+  display: inline-block;
+  text-decoration: none;
+  color:rgb(37, 37, 37);
+  margin: 0 13px;
+}
+
+.spacer{
+  flex: .05;
+}
+
+.align_left{
+  flex: 1 1 auto;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  padding: 5px;
+  height: 25px;
+  border-radius: 3px;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  outline: none;
+  border: 1px solid  rgb(218, 211, 211);
+  border-right: none;
+  background-color: rgb(241, 235, 235);
+}
+
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 37px;
+  text-align: center;
+  color: rgb(160, 156, 156);
+  background-color: rgb(241, 235, 235);
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid  rgb(218, 211, 211);
+  border-left: none;
+  border-radius: 3px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.searchTerm:focus{
+  background-color: white;
+}
+.searchTermBack{
+  background-color: white;
+}
+
+@media (max-width: 840px) 
+{
+  mat-toolbar a
+    {
+        display: none;
+    }
+    .removeIcons{
+      display: none;
+    }
+}
+
+.btn1{
+  height: 100%;
+
+}
+
+.no-hover-effect:hover{
+background-color: transparent;
+}
+
+.menu-btn:hover{
+  font-weight: bold;
+}
+
+.menu-btn{
+  margin-top: -24px;
+}
+
+.orbtn:hover{
+  font-weight: bold;
+}
+
+.tooltip-transparent{
+  background-color: transparent;
+  color: red;
+}
+
+.notification_body {
+  font-size: 0.8rem;
+  margin: 0 0 0.2rem 0;
+  margin-top: -28px;
+}
+.sub {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.logo{
+  cursor: pointer;
+}

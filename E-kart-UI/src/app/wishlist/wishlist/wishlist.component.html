@@ -1,0 +1,75 @@
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="100" fxFlex="100" >
+    <mat-toolbar>
+      <mat-toolbar-row class="wishlist-heading">
+        My Wishlist
+      </mat-toolbar-row>
+    </mat-toolbar>  
+    </div>
+</div>
+<div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+    <div fxFlex.gt-sm="10" fxFlex="100" ></div>
+  <div fxFlex.gt-sm="80" fxFlex="100" >
+  <div class="wishlist-body">
+  <mat-card>
+    <mat-card-content>
+  <!-- <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+      <div fxFlex.gt-sm="100" fxFlex="100" >
+        </div>
+  </div> -->
+<div class="clothing-collection">
+  <mat-card>
+    <mat-card-content>
+        <mat-grid-list cols="4" rowHeight="550px" gutterSize="35px">
+            <mat-grid-tile *ngFor="let product of products;">
+                <mat-card >
+                    <div class="product">
+                      <mat-card-content>
+                        <div class="product-image">
+                          <img mat-card-image class="product-image-function" src="https://images.bewakoof.com/t320/dabbing-panda-crew-neck-sweatshirt-men-s-printed-crewneck-sweatshirts-aw18-204217-1544182728.jpg">
+                        </div>
+                        <div class="product-content">
+                        <div class="product-name">
+                        Dabbing Panda Sweatshirt 
+                        
+                      </div>
+                      <div>
+                        <mat-divider></mat-divider>
+                      </div>
+                     
+                        <div class="product-price">
+                          <div>
+                          <span style="float:left">T-Shirt</span>
+                          <span style="float:right">Rs. 599</span>
+                        </div>
+                        
+                        
+                        </div>
+                        <!--     -->
+                        <div class="product-action">
+                          <button mat-stroked-button >
+                            Remove
+                          </button>&nbsp;&nbsp;
+                          <button mat-stroked-button >
+                            Move to Bag
+                            </button>
+                        </div>
+                      </div>
+                      </mat-card-content>
+                    </div>
+                
+                  </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+</mat-card-content>
+</mat-card>
+</div>
+</mat-card-content>
+</mat-card>
+</div>
+</div>
+<div fxFlex.gt-sm="10" fxFlex="100" ></div>
+</div>

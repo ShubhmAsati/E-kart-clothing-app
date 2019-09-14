@@ -1,0 +1,81 @@
+.acc-btn{
+    height: 150px;
+    width: 100%;
+}
+
+.divider-horizontal{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.divider-vertical{
+    border-left: 1px solid rgb(201, 197, 197);
+    height: 100%;
+}
+
+.main-div{
+    padding: 10px;
+}
+
+.acc-profile{
+    padding-left: 10px;
+}
+
+
+
+.acc-profile-username{
+    padding: 12%;
+}
+
+.acc-menu{
+    padding: 10px;
+    padding-top:20px; 
+}
+
+.menu-content{
+    /* border: 1px solid black; */
+    padding-top:15%;
+    padding-bottom:15%;
+    text-align: center;
+    width: 100%;
+}
+
+:host .menu-icon mat-icon {
+     width: 50px;
+     height: 50px;
+     font-size: 51px;
+   
+ }
+
+ @media (max-width: 840px) 
+{
+
+    .removeExtraSpace{
+      display: none;
+    }
+    .showFilterHeader{
+        display: block;
+      }
+}
+
+.side-nav-head{
+    color: rgba(128, 123, 123, 0.87);
+}
+
+.side-nav-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    padding-left: 2px;
+    
+}
+
+.side-nav-content:hover{
+    background-color: rgb(233, 231, 231);
+}
+
+.change-color{
+    color:rgb(68, 196, 255);
+    font-size: 14px;
+}

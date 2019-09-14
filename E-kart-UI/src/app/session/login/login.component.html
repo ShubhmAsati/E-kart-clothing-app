@@ -1,0 +1,73 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px"  class="background-b1">
+    <div fxFlex.gt-sm="30" fxFlex="100" class="top_margin"></div>
+  <div fxFlex.gt-sm="40" fxFlex="100" class="top_margin">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-card style="opacity: 0.9;">
+      <mat-card-content fxLayout="column" fxLayoutGap="20px" class="pa-1">
+        <div>
+          <hr class="hr-text" data-content="Login to Markhor"><br /><br />
+        </div>
+        <div class="align_center m1">
+          Login with
+        </div>
+        <div class="align_center">
+          <div fxLayout="row wrap">
+            <div fxFlex.gt-sm="20" fxFlex="100"></div>
+            <div fxFlex.gt-sm="30" fxFlex="100">
+              <button mat-stroked-button type="button">
+                <mat-icon svgIcon="fb"></mat-icon>Facebook
+              </button>
+            </div>
+            <div fxFlex.gt-sm="30" fxFlex="100">
+              <button mat-stroked-button type="button">
+                <mat-icon svgIcon="gmail"></mat-icon>Google
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="align_center ">
+          - OR USING EMAIL -
+        </div>
+        <div class="align_center ">
+          <div fxLayout="row wrap">
+            <div fxFlex.gt-sm="20" fxFlex="100"></div>
+            <div fxFlex.gt-sm="60" fxFlex="100" class="example-container">
+              <mat-form-field >
+                <input matInput placeholder="Email Address or Phone Number" formControlName="username">
+                <mat-error *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">
+                    Email or Phone Number is <strong>required</strong>
+                  </mat-error>
+              </mat-form-field>
+              <mat-form-field >
+                  <input matInput placeholder="Password" [type]="hide ?'text': 'password' " type="password" placeholder="Password" formControlName="password">
+                  <mat-icon matSuffix style=" cursor: pointer;" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="loginForm.controls['password'].hasError('pattern') && !loginForm.controls['password'].hasError('required')">
+                      Password length should be greater than or equal to 6 
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+          </div>
+
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+          <div fxLayout="row wrap">
+              <div fxFlex.gt-sm="20" fxFlex="100"></div>
+              <div fxFlex.gt-sm="60" fxFlex="100" class="example-container">
+                <button mat-raised-button type="submit"  style="background: 	#FDBFC2" [ngClass]="{'disable-pointer' : loginForm.invalid}" [disabled]="loginForm.invalid">Login</button>
+                <div style="font-size: 12px; padding-top: 8px;"><a href="#" style="color:#E6AF91;text-decoration: none">Recover password </a><span style="margin-left: 80px;">New to Markhor? <span ><a routerLink="/session/signup" style="color:#E6AF91;text-decoration: none">Create Account</a></span></span></div>
+                <br/>
+                </div>
+                </div>
+                
+      </mat-card-actions>
+    </mat-card>
+  </form>
+    <br/> <br/> <br/><br/> 
+  </div>
+  
+</div>

@@ -1,0 +1,121 @@
+
+.heading-top{
+    width:100%;
+    text-align: center;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    color: #43425D;
+  }
+  .filter-head{
+    padding:10pX;
+    font-size: 17px !important;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  .filter-sizes-body-list{
+      /* padding-left: 10%; */
+      /* text-align: center; */
+      font-size: 13px ;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      width:100%;   
+  }
+
+  .filter-sizes-body-list:hover{
+      background-color: rgb(245, 205, 207);
+  }
+  
+
+  .highlightSelection{
+      background-color: rgb(224, 224, 224);
+  }
+
+
+.color-tile{
+    border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: solid 1px;
+      text-align: center;
+      
+}
+.color-tile-icon {
+    margin-top:2.5px;
+}
+.filter-color-body{
+    padding-top:12px;
+}
+
+.cusor-type{
+    cursor: pointer;
+    
+}
+
+.clothing-collection{
+    padding:10px;
+    padding-top:0;
+}
+
+
+@media (max-width: 840px) 
+{
+
+    .removeExtraSpace{
+      display: none;
+    }
+    .showFilterHeader{
+        display: block;
+      }
+}
+
+@media (min-width: 850px) 
+{
+
+   
+    .showFilterHeader{
+        display: none;
+      }
+}
+
+.product{
+    cursor: pointer;
+}
+
+.product-name{
+    padding-bottom:5px;
+}
+
+.product-price{
+    padding-top:5px;
+}
+.product-content{
+    margin-top:-10px;
+}
+
+
+.filter-box{
+    order: 0;
+    min-width: 140px;
+    width: 140px;
+    transition: width .4s, min-width .4s; 
+}
+
+.filter-box-inner{
+    position: fixed;
+    width:20%;
+    height: 82%;
+    overflow: auto;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.set-width{
+    width:30vh;
+}
+
+.product-image-function:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.product-image-function{
+    transition: transform .5s;
+}

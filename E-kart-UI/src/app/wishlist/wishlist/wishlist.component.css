@@ -1,0 +1,29 @@
+.product-name{
+    padding-bottom:5px;
+}
+
+.product-price{
+    padding-top:5px;
+}
+.product-content{
+    margin-top:-10px;
+}
+.product-image-function:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.product-image-function{
+    transition: transform .5s;
+}
+.wishlist-boady{
+    padding: 10px;
+}
+
+.wishlist-heading{
+        padding-left:48%;
+}
+.product-action{
+    padding-top:25px;
+    text-align: center;
+}

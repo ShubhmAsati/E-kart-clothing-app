@@ -1,0 +1,225 @@
+
+<mat-toolbar color="transparent">
+    <mat-toolbar-row>
+      <h2 class="heading-top">Markhor Clothings</h2>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="showFilterHeader">
+  <div fxLayout="row" >
+      <div fxFlex.gt-sm="25" fxFlex="100"></div>
+      <div fxFlex.gt-sm="10" fxFlex="100">
+        <button mat-button [matMenuTriggerFor]="filter">FILTER</button>
+        <mat-menu #filter="matMenu">
+            <div class="filter-size set-width">
+                <div class="filter-head">
+                  SIZES
+                </div>
+                <mat-divider></mat-divider>
+                <div class="filter-sizes-body">
+                    <mat-list role="list" >
+                        <mat-list-item class="filter-sizes-body-list cusor-type"  role="listitem" *ngFor="let size of sizes; let i=index;" (click)="filterBySize(i)" [ngClass]="{'highlightSelection':size.isSelected}">
+                          &nbsp;&nbsp; {{size.size}}
+                        </mat-list-item>
+                      </mat-list>
+                  </div>
+                </div>
+                <div class="filter-color">
+                    <div class="filter-head">
+                        COLOR
+                      </div>
+                      <mat-divider></mat-divider>
+                      <div class="filter-color-body">
+                          <mat-grid-list cols="4" rowHeight="35px">
+                              <mat-grid-tile *ngFor=" let tshirt of t_shirts; let i=index;" (click)="filterByColor(i)"><span class="color-tile cusor-type" [style.border-color]="tshirt.isSelected?tshirt.t_shirt_color:'transparent'"><mat-icon class="color-tile-icon" [svgIcon]="tshirt.t_shirt_name"></mat-icon></span></mat-grid-tile>
+                              
+                          </mat-grid-list>
+                      </div>
+                </div>
+                
+        </mat-menu>
+      </div>
+      <div fxFlex.gt-sm="30" fxFlex="100"></div>
+      <div fxFlex.gt-sm="10" fxFlex="100" style="text-align:right">
+        <button mat-button [matMenuTriggerFor]="sortby">SORT BY</button>
+        <mat-menu #sortby="matMenu">
+            <div class="filter-sortby set-width">
+                <div class="filter-head">
+                    SORT BY
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="filter-sortby-body">
+                      <mat-list role="list" >
+                          <mat-list-item class="filter-sizes-body-list cusor-type"  role="listitem" *ngFor="let sort of sortbyData; let i=index;" (click)="sortByFilter(i)" [ngClass]="{'highlightSelection':sort.isSelected}">
+                            &nbsp;&nbsp; {{sort.sortType}}
+                          </mat-list-item>
+                        </mat-list>
+                  </div>
+            </div>
+          </mat-menu>
+      </div>
+      <div fxFlex.gt-sm="25" fxFlex="100"></div>
+      
+  </div>
+  </div>
+  <div fxLayout="row">
+      <div fxFlex.gt-sm="100" fxFlex="100" style="padding-bottom:10px;"><mat-divider></mat-divider></div>
+  </div>
+  <div fxLayout="row">
+      <div fxFlex.gt-sm="10" fxFlex="100" class="removeExtraSpace">
+      </div>
+      <div fxFlex.gt-sm="20" fxFlex="100" [class.mat-elevation-z2]="true" class="filter-box removeExtraSpace">
+        <div >
+          <div fxLayout="column"  fxLayoutGap="7px">
+              <div fxFlex.gt-sm="100" fxFlex="100" >
+                <div class="filter-box-inner">
+                <mat-card>
+                  <mat-card-content>
+                  <mat-toolbar color="transparent">
+                      <mat-toolbar-row>
+                        <h2 class="heading-top">Filters</h2>
+                      </mat-toolbar-row>
+                    </mat-toolbar>
+                    <div class="filter-size">
+                    <div class="filter-head">
+                      SIZES
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="filter-sizes-body">
+                        <mat-list role="list" >
+                            <mat-list-item class="filter-sizes-body-list cusor-type"  role="listitem" *ngFor="let size of sizes; let i=index;" (click)="filterBySize(i)" [ngClass]="{'highlightSelection':size.isSelected}">
+                              &nbsp;&nbsp; {{size.size}}
+                            </mat-list-item>
+                          </mat-list>
+                      </div>
+                    </div>
+                    <div class="filter-color">
+                        <div class="filter-head">
+                            COLOR
+                          </div>
+                          <mat-divider></mat-divider>
+                          <div class="filter-color-body">
+                              <mat-grid-list cols="4" rowHeight="35px">
+                                  <mat-grid-tile *ngFor=" let tshirt of t_shirts; let i=index;" (click)="filterByColor(i)"><span class="color-tile cusor-type" [style.border-color]="tshirt.isSelected?tshirt.t_shirt_color:'transparent'"><mat-icon class="color-tile-icon" [svgIcon]="tshirt.t_shirt_name"></mat-icon></span></mat-grid-tile>
+                                  
+                              </mat-grid-list>
+                          </div>
+                    </div>
+                    <div class="filter-sortby">
+                        <div class="filter-head">
+                            SORT BY
+                          </div>
+                          <mat-divider></mat-divider>
+                          <div class="filter-sortby-body">
+                              <mat-list role="list" >
+                                  <mat-list-item class="filter-sizes-body-list cusor-type"  role="listitem" *ngFor="let sort of sortbyData; let i=index;" (click)="sortByFilter(i)" [ngClass]="{'highlightSelection':sort.isSelected}">
+                                    &nbsp;&nbsp; {{sort.sortType}}
+                                  </mat-list-item>
+                                </mat-list>
+                          </div>
+                          <mat-divider></mat-divider>
+                    </div>
+                    </mat-card-content>
+                    </mat-card>
+  </div>
+  
+              </div>
+            </div>
+            </div>
+      </div>
+      <div fxFlex.gt-sm="60" fxFlex="100" >
+          <div fxLayout="row" fxLayout.xs="column"  fxLayoutGap="7px">
+              <div fxFlex.gt-sm="100" fxFlex="100" >
+                </div>
+          </div>
+        <div class="clothing-collection">
+          <mat-card>
+            <mat-card-content>
+          
+  
+                <mat-grid-list cols="3" rowHeight="450px" gutterSize="30px">
+                    <mat-grid-tile *ngFor="let product of products; let i=index;">
+                        <mat-card >
+                            <div class="product">
+                              <mat-card-content>
+                                <div class="product-image">
+                                  <img mat-card-image class="product-image-function" [src]="image_url+product.product_pic[0]">
+                                </div>
+                                <div class="product-content">
+                                <div class="product-name">
+                                {{product.name}} 
+                                
+                              </div>
+                              <div>
+                                <mat-divider></mat-divider>
+                              </div>
+                              <!-- <div style="padding-top: 5px;">
+                                    
+                                  <span><mat-icon>mood_bad</mat-icon></span>
+                                  <span><mat-icon>sentiment_very_dissatisfied</mat-icon></span>
+                                  <span><mat-icon>sentiment_dissatisfied</mat-icon></span>
+                                  <span><mat-icon>sentiment_satisfied</mat-icon></span>
+                                  <span><mat-icon>sentiment_very_satisfied</mat-icon></span>
+                                  
+                                </div>
+                                <div>
+                                    <mat-divider></mat-divider>
+                                  </div> -->
+                                <div class="product-price">
+                                  <div>
+                                  <span style="float:left">T-Shirt</span>
+                                  <span style="float:right">Rs. {{product.price}}</span>
+                                </div><br/>
+                                
+                                <div style="padding-top: 5px;">
+                                    <span style="float:left"><button type="button" mat-stroked-button (click)="editProduct(i)"><mat-icon style="color: rgb(68, 196, 255);">edit</mat-icon></button></span>
+                                    <span style="float:right"><button type="button" mat-stroked-button (click)="deleteProduct(i)"><mat-icon style="color: rgb(245, 12, 12);">delete</mat-icon></button></span>
+                                  </div>
+                                  <br/>
+                                
+                                </div>
+                                
+                                
+                              </div>
+                              </mat-card-content>
+                            </div>
+                        
+                          </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+  
+  
+  
+        </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+      <div fxFlex.gt-sm="10" fxFlex="100" class="removeExtraSpace" ></div>
+  </div>
+
+  
+  
+  
+  
+  
+  
+  <!-- 
+  <mat-card>
+      <div class="product">
+        <mat-card-content>
+          <div class="product-image">
+            <img mat-card-image src="https://images.bewakoof.com/t320/dabbing-panda-crew-neck-sweatshirt-men-s-printed-crewneck-sweatshirts-aw18-204217-1544182728.jpg">
+          </div>
+          <div class="product-content">
+          <div class="product-name">
+          Dabbing Panda Sweatshirt 
+        </div>
+          <mat-divider></mat-divider>
+          <div class="product-price">
+            <span style="float:left">T-Shirt</span>
+            <span style="float:right">Rs. 599</span>
+          </div>
+        </div>
+        </mat-card-content>
+      </div>
+  
+    </mat-card> -->

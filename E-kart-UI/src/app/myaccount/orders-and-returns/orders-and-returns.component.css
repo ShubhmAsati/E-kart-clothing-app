@@ -1,0 +1,119 @@
+.acc-btn{
+    height: 150px;
+    width: 100%;
+}
+
+.divider-horizontal{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.divider-vertical{
+    border-left: 1px solid rgb(201, 197, 197);
+    height: 100%;
+}
+
+.main-div{
+    padding: 10px;
+}
+
+
+ @media (max-width: 840px) 
+{
+
+    .removeExtraSpace{
+      display: none;
+    }
+    .showFilterHeader{
+        display: block;
+      }
+}
+
+.side-nav-head{
+    color: rgba(128, 123, 123, 0.87);
+}
+
+.side-nav-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    padding-left: 2px;
+    
+}
+
+.side-nav-content:hover{
+    background-color: rgb(233, 231, 231);
+}
+
+.acc-order-pic{
+    /* height: 280px; */
+    padding: 10px;
+}
+
+.acc-order-data{
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.acc-order-head{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.acc-order-price{
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+.status-head{
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    color: rgba(161, 161, 161, 0.877);
+}
+
+.dot{
+    /* height: 8px; */
+    /* width: 15px; */
+    border-radius: 50%;
+    color:  rgb(89, 175, 68);
+    background-color: rgb(89, 175, 68);
+}
+
+.status-val{
+    color : rgb(89, 175, 68);
+    font-size:15px;
+}
+
+.order-details-head{
+    font-size: 15px;
+    padding-top: 12px;
+    color: rgba(161, 161, 161, 0.877);
+    padding-bottom: 10px;
+}
+
+.order-details{
+    
+}
+
+.hide{
+    display: none;
+}
+
+:host mat-horizontal-stepper{
+    pointer-events: none !important;
+}
+
+:host mat-horizontal-stepper .hide{
+    display: none;
+}
+
+.action-btn{
+    float: right;
+    padding-right: 50px;
+}
+
+.action-btn button{
+    width: 150%;
+    height: 40px;
+}
