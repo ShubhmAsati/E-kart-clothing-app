@@ -25,7 +25,7 @@
     "@angular/router": "~7.2.0",
     "angular-bootstrap-md": "^7.4.2",
     "angular-star-rating": "^2.0.0-rc.5",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "core-js": "^2.5.4",
     "firebase": "^5.9.0",
     "font-awesome": "^4.7.0",
